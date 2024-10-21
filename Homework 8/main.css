@@ -1,0 +1,21 @@
+.my-link{
+    color:darkslateblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#my-favorite-story{
+    color:cornflowerblue;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+#kakashi-story{
+    color:slateblue;
+    font-family:'Courier New', Courier, monospace;
+
+}
+#kakashi-background{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBleqIYyhfgTmIVI_kb4UX649pm3DggD9Zg&s);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
