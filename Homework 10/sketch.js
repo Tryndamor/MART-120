@@ -42,7 +42,7 @@ function setup()
         textSize(TextSize)
         text("My portrait!", 10,80);
         TextSize += TextSizeDirection * TextSizeChangeRate; // IDK why this one was hard for me.
-        if (TextSize >= maxTextSize || TextSize <= minTextSize) 
+    if (TextSize >= maxTextSize || TextSize <= minTextSize) 
             {
             TextSizeDirection *= -1; 
             }
