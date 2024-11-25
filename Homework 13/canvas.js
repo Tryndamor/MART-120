@@ -7,7 +7,7 @@ var characterY = 850
 var shapeXs = [125, 700, 75, 100, 800];
 var shapeYs = [125, 25, 25, 400, 300];
 var diameters = [150, 0, 0, 0, 0];  
-var rectWidths = [0, 20, 20, 0, 0];         //MY ARRAY 
+var rectWidths = [0, 10, 20, 0, 0];         //MY ARRAY 
 var rectHeights = [0, 75, 75, 0, 0]; 
 var speeds = [2, 2, 3, 2, 2];
 var directions = [2, -1, 1, 2, 2];
@@ -161,9 +161,9 @@ function draw ()
             if (diameters[t] > 0)
             {
                 fill(255,0,0);
-                circle(shapeXs[t], shapeYs[t], diameters[t]);
+                circle(shapeXs[t], shapeYs[t], diameters[t]);       // Making the Red Circle
             }
-            else if (rectWidths[t] > 0 && rectHeights[t] > 0)
+            else if (rectWidths[t] > 0 && rectHeights[t] > 0)       // Making the Blue Rectangles for Ice
             {
                 if(t % 2 == 0)
                 {
@@ -177,7 +177,7 @@ function draw ()
             }
             else
             {
-                if (t % 2 == 0)
+                if (t % 2 == 0)                                       // Making the Purple and Pink Bats
                 {
                     fill(128, 0, 128)
                 }
@@ -187,7 +187,7 @@ function draw ()
                 }
                 triangle(shapeXs[t] - 20, shapeYs[t] -20,
                          shapeXs[t] + 20, shapeYs[t] -20,
-                         shapeXs[t], shapeYs[t] -40)
+                         shapeXs[t], shapeYs[t] -35)
             }
         }
     }    
