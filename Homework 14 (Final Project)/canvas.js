@@ -8,8 +8,8 @@ var princessY = 200;
 var princessW = 50;
 var princessH = 50;
 
-var castleGuardX = [300,100,100,200,1500,1800,1500,1800];//1500-1800
-var castleGuardY = [100,650,300,100,550,750,450,250]; //550-750
+var castleGuardX = [300,100,100,200,1500,1800,1500,1800];
+var castleGuardY = [100,650,300,100,550,750,450,250]; 
 var currentPatrolPoint = [0,0,0,0,0,0,0,0];
 var castleGuardSpeed = 1;
 var castleGuardPatrolX = [[1500,1500,1800,1800],[1800,1800,1500,1500],[1500,1500,1800,1800],[1800,1800,1500,1500]];
@@ -82,7 +82,7 @@ function castleGrounds ()
     line (1060,380,1090,350)
     line (1090,350,1090,270)
     line (1090,270,1060,220)
-    line (1060,220,940,220)             //blue design around circle platform
+    line (1060,220,940,220) //blue design around circle platform
     line (940,220,910,270)
     line (910,270,910,350)
     line (910,350,940,380)
@@ -102,27 +102,21 @@ function castleGrounds ()
     triangle (980,300,1000,280,1020,300)
 
 
-    fill(131,180,235)                    // glowing blue sword
+    fill(131,180,235)     // glowing blue sword
     rect (997,260,7,50)
     line (998,248,1002,248)
     
 
     fill (74,81,177)
     stroke (67,72,133)
-    strokeWeight (0)                     // purple sword hilt
+    strokeWeight (0)    // purple sword hilt
     rect (985,259,30,8)
     rect (996,240,8,8)
     rect(998,248,4,12)
     triangle(983,259,994,259,986,273)
     triangle(1018,259,1007,259,1015,273)
 
-    
-
-    
-
-
-
-    if (castleWallVisible)
+    if (castleWallVisible)   // This is the brown castle gate wall
     {
     fill (102,66,40)
     stroke (0,0,0)
@@ -136,7 +130,7 @@ function castleGrounds ()
    
     if (vineWallVisible)
     {
-        fill (65,132,72)    // Vine Wall
+        fill (65,132,72)    // Thisn is the green Vine Wall
         stroke (57,100,62)
         strokeWeight (2)
         rect (1390,720,30,100) 
@@ -146,9 +140,9 @@ function castleGrounds ()
 function princess ()
 {
     fill (209,171,136)
-    circle (princessX, princessY, princessW)                          //character body
+    circle (princessX, princessY, princessW)                          //princess body
     fill (244,189,230)
-    triangle (princessX-20,princessY-princessH/3,                    //character hat
+    triangle (princessX-20,princessY-princessH/3,                    //princess hat
               princessX+20,princessY-princessH/3,
               princessX,princessY-princessH/1.2)
     fill(244,189,230);
@@ -170,13 +164,13 @@ function castleGuards ()
     for (let i = 0; i < castleGuardX.length; i++)
     {
     fill (161,157,148);
-    circle (castleGuardX[i],castleGuardY[i], characterW);                           //character body
+    circle (castleGuardX[i],castleGuardY[i], characterW);                           //Guard body
     fill (54,69,79);
-    triangle (castleGuardX[i]-20,castleGuardY[i]-characterH/3,                      //character hat
+    triangle (castleGuardX[i]-20,castleGuardY[i]-characterH/3,                      //Guard hat
               castleGuardX[i]+20,castleGuardY[i]-characterH/3,
               castleGuardX[i],castleGuardY[i]-characterH/1.2);
     fill(54,69,79);
-    arc(castleGuardX[i], castleGuardY[i], characterW, characterW, 0, PI);           //character outfit
+    arc(castleGuardX[i], castleGuardY[i], characterW, characterW, 0, PI);           //Guard outfit
     fill (31,38,42);
     circle (castleGuardX[i]-24,castleGuardY[i]+2,characterW/5);                    //left hand
     circle (castleGuardX[i]+24,castleGuardY[i]+2,characterW/5);                    //right hand
@@ -184,8 +178,8 @@ function castleGuards ()
     circle (castleGuardX[i]+10,castleGuardY[i]+24,characterW/5);                   //right foot
     rect (castleGuardX[i]-23,castleGuardY[i]+10,characterH-4,characterW-47);
     fill (31,38,42);                                                  
-    rect (castleGuardX[i]-22,castleGuardY[i]-17,characterH-7,characterW-44);       
-    rect (castleGuardX[i]-3,castleGuardY[i]+10,characterH-45,characterW-47); 
+    rect (castleGuardX[i]-22,castleGuardY[i]-17,characterH-7,characterW-44);       //Guard hair
+    rect (castleGuardX[i]-3,castleGuardY[i]+10,characterH-45,characterW-47);       //Guard belt
     
     
         for (let i = 0; i < castleGuardX.length; i++) 
